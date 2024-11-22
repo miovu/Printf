@@ -46,7 +46,8 @@ int	ft_printf(const char *s, ...)
 			if (s[finder] == ' ')
 				finder += skipspace(s, finder);
 			counter += printf_format(&s[finder], args);
-			finder++;
+			if (s[finder])
+				finder++;
 		}
 	}
 	va_end(args);
@@ -99,7 +100,7 @@ int main()
 	ft_printf(" NULL %s NULL ", a);
 	char *b = NULL;
 	printf(" NULL %s NULL ", b); */
-
+	ft_printf("%")
 	printf("%d\n", ft_printf("%"));
 	printf("%d", printf("%"));
 }
