@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   printnbrs.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chillhoneyyy <chillhoneyyy@student.42.f    +#+  +:+       +#+        */
+/*   By: miovu <miovu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 16:51:45 by miovu             #+#    #+#             */
-/*   Updated: 2025/01/20 15:46:08 by chillhoneyy      ###   ########.fr       */
+/*   Updated: 2025/01/27 12:59:13 by miovu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,13 @@ int	ft_putnbr(int nbr, int fd)
 	return (counter);
 }
 
-int	ft_putnbr_un_fd(unsigned int nbr, int fd)
+int	ft_putnbr_un(unsigned int nbr, int fd)
 {
 	int	counter;
 
 	counter = 0;
 	if (nbr > 9)
-		counter += ft_putnbr_un_fd(nbr / 10, fd);
+		counter += ft_putnbr_un(nbr / 10, fd);
 	counter += ft_putchar((nbr % 10) + '0', fd);
 	return (counter);
 }

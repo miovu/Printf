@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chillhoneyyy <chillhoneyyy@student.42.f    +#+  +:+       +#+        */
+/*   By: miovu <miovu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 14:31:17 by miovu             #+#    #+#             */
-/*   Updated: 2025/01/20 15:47:52 by chillhoneyy      ###   ########.fr       */
+/*   Updated: 2025/01/27 12:59:23 by miovu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ int	printf_format(const char *format, va_list args);
 int	ft_putchar(int c, int fd);
 int	ft_putnbr(int nbr, int fd);
 int	ft_putnbr_hex(unsigned long long nbr, char c, int fd);
-int	ft_putnbr_un_fd(unsigned int nbr, int fd);
-int	ft_putptr_fd(void *ptr, int fd);
+int	ft_putnbr_un(unsigned int nbr, int fd);
+int	ft_putptr(void *ptr, int fd);
 int	ft_putstr(char *s, int fd);
 
 #endif

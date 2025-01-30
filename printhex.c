@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   printhex.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chillhoneyyy <chillhoneyyy@student.42.f    +#+  +:+       +#+        */
+/*   By: miovu <miovu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 16:59:41 by miovu             #+#    #+#             */
-/*   Updated: 2025/01/20 15:47:18 by chillhoneyy      ###   ########.fr       */
+/*   Updated: 2025/01/29 14:55:21 by miovu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_putnbr_hex(unsigned long long nbr, char c, int fd)
 	return (counter);
 }
 
-int	ft_putptr_fd(void *ptr, int fd)
+int	ft_putptr(void *ptr, int fd)
 {
 	unsigned long long	nbr;
 	int					counter;
