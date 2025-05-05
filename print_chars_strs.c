@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_chars_strs.c                                 :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miovu <miovu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 16:45:00 by miovu             #+#    #+#             */
-/*   Updated: 2025/01/29 19:42:45 by miovu            ###   ########.fr       */
+/*   Updated: 2024/12/27 17:57:53 by miovu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(int c, int fd)
+int	ft_putchar_fd(int c, int fd)
 {
 	write(fd, &c, 1);
 	return (1);
 }
 
-int	ft_putstr(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 

@@ -6,12 +6,11 @@
 /*   By: miovu <miovu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 14:27:16 by miovu             #+#    #+#             */
-/*   Updated: 2024/11/22 18:42:02 by miovu            ###   ########.fr       */
+/*   Updated: 2025/04/30 14:09:18 by miovu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
 
 int	skipspace(const char *s, int finder)
 {
@@ -46,8 +45,7 @@ int	ft_printf(const char *s, ...)
 			if (s[finder] == ' ')
 				finder += skipspace(s, finder);
 			counter += printf_format(&s[finder], args);
-			if (s[finder])
-				finder++;
+			finder++;
 		}
 	}
 	va_end(args);
@@ -75,32 +73,24 @@ int	printf_format(const char *format, va_list args)
 		print += ft_putnbr_hex(va_arg(args, unsigned int), 'X', 1);
 	else if (*format == '%')
 		print += ft_putchar_fd('%', 1);
-	//else if (*format == '\0')
-		//return (-1);
 	return (print);
 }
 
-#include <stdio.h>
 int main()
 {
-	/* char *ptr = "Margott";
+	char *ptr = "Margott";
 	char *ptr1 = NULL;
 	ft_printf("%   dOWN\n\n", 1);
-	int	own = ft_printf("INT: %i\nUNS: %u\nDEC: %d\nhex: %x\nHEX: %X\n
-	STR: %s\nCHR: %c\nPTR: %p\n %p\n %% % % % %\n", 1, 1, 1, 3000, 3000, 
-	"asas", 'a', ptr, ptr1);
+	int	own = ft_printf("INT: %i\nUNS: %u\nDEC: %d\nhex: %x\nHEX: %X\nSTR: %s\nCHR: %c\nPTR: %p\n %p\n %% % % % %\n", 1, 1, 1, 3000, 3000, "asas", 'a', ptr, ptr1);
 	ft_printf("\nCounter: %d\n\n\n", own);
 	printf("%   dORIGINAL\n\n", 1);
-	int	og = printf("INT: %i\nUNS: %u\nDEC: %d\nhex: %x\nHEX: %X\n
-	STR: %s\nCHR: %c\nPTR: %p\n %p\n %% % % % %\n", 1, 1, 1, 3000, 3000, 
-	"asas", 'a', ptr, ptr1);
+	int	og = printf("INT: %i\nUNS: %u\nDEC: %d\nhex: %x\nHEX: %X\nSTR: %s\nCHR: %c\nPTR: %p\n %p\n %% % % % %\n", 1, 1, 1, 3000, 3000, "asas", 'a', ptr, ptr1);
 	printf("\nCounter: %d\n\n\n", og);
-	 */
-	/* char *a = NULL; 
+	
+	char *a = NULL; 
 	ft_printf(" NULL %s NULL ", a);
 	char *b = NULL;
-	printf(" NULL %s NULL ", b); */
-	ft_printf("%")
-	printf("%d\n", ft_printf("%"));
-	printf("%d", printf("%"));
+	printf(" NULL %s NULL ", b);
+
+	ft_printf("mj%%%1");
 }
